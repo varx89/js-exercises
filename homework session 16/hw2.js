@@ -10,7 +10,7 @@ const showDuplicates = (myArray) => {
   let resArray = [];
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
-      if (array[i] === array[i + j + 1] && resArray.indexOf(array[i]) < 0) {
+      if (array[i] === array[i + j + 1] && !resArray.includes(array[i])) {
         resArray.push(array[i]);
       }
     }
