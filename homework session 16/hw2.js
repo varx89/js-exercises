@@ -1,6 +1,7 @@
 /*
 2. Creeaza o funcție care gaseste toate valorile duplicate intr-un array
  și returnează o lista cu toate valorile care apar de mai multe ori.
+ #EXTRA and sort them ASC
 */
 
 let numbers = [8, 19, 65, 33, 8, 22, 19, 33, 4, 16, 23, 22, 33];
@@ -15,7 +16,7 @@ const showDuplicates = (myArray) => {
       }
     }
   }
-  return resArray;
+  return resArray.sort((x, y) => x - y);
 };
 
 console.log(showDuplicates(numbers));
@@ -31,7 +32,7 @@ const notShowDuplicates = (myArray) => {
       }
     }
   }
-  return resArray;
+  return resArray.sort((x, y) => x - y);
 };
 
 console.log(notShowDuplicates(numbers));
