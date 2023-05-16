@@ -16,7 +16,7 @@ const showDuplicates = (myArray) => {
       }
     }
   }
-  return resArray.sort((x, y) => x - y);
+  return resArray.sort((x, y) => x * y);
 };
 
 console.log(showDuplicates(numbers));

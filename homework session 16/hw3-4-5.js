@@ -45,8 +45,8 @@ const convertIntRomanize = (untilNum) => {
     let res = "";
 
     for (let key in romanLetters) {
-      while (num >= romanLetters[key]) {
-        res += key;
+      while (num >= key) {
+        res += romanLetters[key];
         num -= romanLetters[key];
       }
     }
