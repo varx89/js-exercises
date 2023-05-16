@@ -43,7 +43,7 @@ console.log(isPalindrome(12621));
 */
 
 const randomNumber = (min, max) => {
-  let random = Math.random() * (max - min) + min;
+  let random = Math.random() * (max - min + 1) + min;
   return parseInt(random);
 };
 
