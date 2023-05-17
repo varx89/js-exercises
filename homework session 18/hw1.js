@@ -25,7 +25,7 @@ car.lastRev = "";
 // delete car.lastRev;
 
 // b. Modifica caii putere
-car.km = 237000;
+car.hp = 130;
 
 // c. Adaugă proprietate pentru data primei inmatriculari
 car.firstReg = new Date("February 16, 2010");
