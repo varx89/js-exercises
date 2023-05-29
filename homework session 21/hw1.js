@@ -61,8 +61,7 @@ function BankAccount(accountNumber, ID, balance, accountName) {
 }
 
 BankAccount.prototype.payOff = function (amount) {
-  this.balance =
-    this.balance <= -1 ? this.balance + amount : this.balance - amount;
+  this.balance = this.balance + amount;
   // return this;
 };
 
