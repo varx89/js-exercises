@@ -14,7 +14,8 @@ class Bank {
   name;
   swift;
   country;
-  // listAccounts;
+
+  #accounts = [];
   // createAccounts;
   // negativeAccounts;
 
@@ -24,13 +25,21 @@ class Bank {
     this.country = country;
   }
 
-  listAccounts() {}
-  createAccounts() {}
-  negativeAccounts() {}
+  listAccounts() {
+    return this.#accounts;
+  }
+
+  createAccounts(...acc) {
+    this.#accounts.push(...acc);
+  }
+  listNegativeAccounts() {
+    // return this.accounts[0].balance;
+    return this.#accounts.filter((element) => element.balance < 0);
+  }
 }
 
-const bank1 = new Bank('Deutsche Bank', 'RZRPROBU', 'Romania');
-console.log(bank1);
+const deutscheBank = new Bank('Deutsche Bank', 'RZRPROBU', 'Romania');
+console.log(deutscheBank);
 
 /*
 Folosind constructor functions, creeaza modelul unui cont bancar pe care îl poți adăuga 
@@ -51,11 +60,34 @@ function BankAccount(accountNumber, ID, balance, accountName) {
   this.fullName = accountName;
 }
 
+BankAccount.prototype.payOff = function (amount) {
+  this.balance =
+    this.balance < 0 ? this.balance + amount : this.balance - amount;
+  // return this;
+};
+
 const acc1 = new BankAccount(
   'RORNCB00012320909796',
-  Date.now(),
-  19233,
+  18905115515,
+  -3233,
   'Andrei Varcus'
 );
+const acc2 = new BankAccount(
+  'RORZB854326758365784',
+  16309010072,
+  9550,
+  'Varcus Andrei'
+);
 
-console.log(acc1);
+console.log(acc1, acc2);
+
+acc1.payOff(2233);
+acc2.payOff(5550);
+
+console.log(acc1, acc2);
+
+// deutscheBank.createAccounts(acc1);
+// deutscheBank.createAccounts(acc2);
+deutscheBank.createAccounts(acc1, acc2);
+console.log(deutscheBank.listAccounts());
+console.log(deutscheBank.listNegativeAccounts());
