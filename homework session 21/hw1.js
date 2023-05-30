@@ -29,7 +29,7 @@ class Bank {
     return this.#accounts;
   }
 
-  createAccounts(...acc) {
+  addAccount(...acc) {
     this.#accounts.push(...acc);
   }
   listNegativeAccounts() {
@@ -87,6 +87,6 @@ console.log(acc1, acc2);
 
 // deutscheBank.createAccounts(acc1);
 // deutscheBank.createAccounts(acc2);
-deutscheBank.createAccounts(acc1, acc2);
+deutscheBank.addAccount(acc1, acc2);
 console.log(deutscheBank.listAccounts());
 console.log(deutscheBank.listNegativeAccounts());
