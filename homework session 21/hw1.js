@@ -57,7 +57,7 @@ function BankAccount(accountNumber, ID, balance, accountName) {
   this.accountNumber = accountNumber;
   this.ID = ID;
   this.balance = balance;
-  this.fullName = accountName;
+  this.accountName = accountName;
 }
 
 BankAccount.prototype.payOff = function (amount) {
