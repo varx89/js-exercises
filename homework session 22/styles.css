@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #116a7b;
+  --light-color: #c2dedc;
+  --accent-light-color: #ece5c7;
+  --accent-dark-color: #cdc2ae;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+#header {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#header .info {
+  background-color: var(--light-color);
+  padding: 2rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+}
