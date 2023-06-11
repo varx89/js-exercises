@@ -22,32 +22,53 @@
     <script defer src="./calculator.js"></script>
   </head>
   <body>
-    <section id="main">
-      <div class="info">
-        <p><i class="fa-solid fa-calculator"></i> Standard Calculator</p>
+    <header>
+      <nav>
+        <div>
+          <i class="fa fa-calculator" aria-hidden="true"></i> Standard
+          Calculator
+        </div>
+        <div>
+          <a href="#standard">#standardWidth</a>
+          <a href="#full">#fullWidth</a>
+        </div>
+      </nav>
+    </header>
+    <section id="calculator">
+      <div id="memory">50+50</div>
+      <div class="input-group">
+        <input type="number" id="calculator-input" value="88" />
       </div>
-      <div class="calculator-body">
-        <div class="grid-container">
-          <div class="grid-result">
-            <input type="number" id="calc-input" name="calc-input" size="30" />
-          </div>
-          <div id="delete" class="grid-delete">C</div>
-          <div id="1" class="grid-num">1</div>
-          <div id="2" class="grid-num">2</div>
-          <div id="3" class="grid-num">3</div>
-          <div id="/" class="grid-operand">/</div>
-          <div id="4" class="grid-num">4</div>
-          <div id="5" class="grid-num">5</div>
-          <div id="6" class="grid-num">6</div>
-          <div id="-" class="grid-operand">-</div>
-          <div id="7" class="grid-num">7</div>
-          <div id="8" class="grid-num">8</div>
-          <div id="9" class="grid-num">9</div>
-          <div id="+" class="grid-operand">+</div>
-          <div id="." class="grid-dot">.</div>
-          <div id="0" class="grid-num">0</div>
-          <div id="=" class="grid-equal">=</div>
-          <div id="*" class="grid-operand">*</div>
+      <div id="operand">
+        <div id="grid-container">
+          <button>%</button>
+          <button>1/x</button>
+          <button>x2</button>
+          <button>2 rad x</button>
+
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operations">/</button>
+
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="operations">x</button>
+
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="operations">-</button>
+
+          <button>+-</button>
+          <button>0</button>
+          <button>.</button>
+          <button class="operations">+</button>
+
+          <button><i class="fa-solid fa-delete-left"></i></button>
+          <button>C</button>
+          <button class="span-2 equal">=</button>
         </div>
       </div>
     </section>
