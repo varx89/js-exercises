@@ -51,3 +51,10 @@ section .robot .description {
 section .robot .description p {
   margin: 0.2rem 0rem;
 }
+section .robot .description p .full-name {
+  color: #dd92cd;
+  font-weight: bold;
+}
+section .robot .description p .email {
+  color: #fddb7b;
+}
