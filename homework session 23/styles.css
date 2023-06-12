@@ -24,8 +24,30 @@ body {
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(73, 70, 70, 0.8);
   text-align: center;
   padding: 1.2rem;
   color: white;
+  margin-bottom: 2rem;
+}
+section .robot {
+  background-color: #1e2020;
+  width: max-content;
+  padding: 1rem;
+  border: 1px solid rgba(67, 68, 68, 0.725);
+  border-radius: 0.5rem;
+  box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.073),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.105),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.137),
+    100px 100px 80px rgba(0, 0, 0, 0.21);
+}
+section .robot .avatar img {
+  width: 15rem;
+  margin-bottom: 1rem;
+}
+section .robot .description {
+  color: rgb(136, 133, 133);
+}
+section .robot .description p {
+  margin: 0.2rem 0rem;
 }
