@@ -7,9 +7,10 @@ Tot pe aceeași pagina afișează și rezultatul calculului.
 
 
 */
-const stdWidth = document.getElementById('stdWidth');
-const fullWidth = document.getElementById('fullWidth');
+// const stdWidth = document.getElementById('stdWidth');
+// const fullWidth = document.getElementById('fullWidth');
 const body = document.body;
+const toggle = document.getElementById('toggle-switch');
 const memory = document.getElementById('memory');
 const resultInput = document.getElementById('calculator-input');
 const cButton = document.getElementById('c-button');
@@ -33,11 +34,19 @@ const powButton = document.getElementById('pow');
 const divXButton = document.getElementById('divx');
 const sqrtButton = document.getElementById('sqrt');
 
-stdWidth.addEventListener('click', () => {
-  body.classList.add('body-size');
-});
-fullWidth.addEventListener('click', () => {
-  body.classList.remove('body-size');
+// stdWidth.addEventListener('click', () => {
+//   body.classList.add('body-size');
+// });
+// fullWidth.addEventListener('click', () => {
+//   body.classList.remove('body-size');
+// });
+
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    body.classList.add('body-size');
+  } else {
+    body.classList.remove('body-size');
+  }
 });
 
 const clear = () => {

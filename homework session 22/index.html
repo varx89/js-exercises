@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./slider.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,15 +24,20 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="switch-flex">
         <div>
           <i class="fa fa-calculator" aria-hidden="true"></i> Standard
           Calculator
         </div>
         <div>
-          <a href="#standard" id="stdWidth">#std</a>
+          <!-- <a href="#standard" id="stdWidth">#std</a>
           <span> | </span>
-          <a href="#full" id="fullWidth">#full</a>
+          <a href="#full" id="fullWidth">#full</a> -->
+          <label class="switch">
+            <input id="toggle-switch" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle">#small</span>
         </div>
       </nav>
     </header>
